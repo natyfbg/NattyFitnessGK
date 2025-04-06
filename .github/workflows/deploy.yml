@@ -9,10 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: backend
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -24,10 +20,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r backend/requirements.txt
 
       - name: Zip backend folder
-        run: zip -r backend.zip . -x "venv/*" ".git/*" ".github/*"
+        run: |
+          cd backend
+          zip -r backend.zip ./
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
@@ -38,4 +36,4 @@ jobs:
           environment_name: nattyfitness-env
           region: us-east-2
           version_label: ${{ github.sha }}
-          deployment_package: backend.zip
+          deployment_package: backend/backend.zip
