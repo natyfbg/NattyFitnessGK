@@ -12,7 +12,7 @@ def home():
 def get_workouts():
     workouts = [
         {"name": "Push-ups", "type": "push", "muscles": ["chest", "triceps"]},
-        {"name": "Pull-ups", "type": "pull", "muscles": ["back", "2ceps"]},
+        {"name": "Pull-ups", "type": "pull", "muscles": ["back", "biceps"]},
         {"name": "Squats", "type": "legs", "muscles": ["quads", "glutes"]}
     ]
     return jsonify(workouts)
