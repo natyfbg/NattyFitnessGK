@@ -26,6 +26,9 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Zip backend folder
+        run: zip -r backend.zip . -x "venv/*" ".git/*" ".github/*"
+
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
         with:
