@@ -25,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Zip backend folder as nattyfitness-backend.zip
-        run: zip -r ../nattyfitness-backend.zip .
+      - name: Zip backend folder
+        run: zip -r ../backend.zip .
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
@@ -37,4 +37,4 @@ jobs:
           environment_name: nattyfitness-env
           region: us-east-2
           version_label: ${{ github.sha }}
-          deployment_package: nattyfitness-backend.zip
+          deployment_package: backend.zip
