@@ -21,10 +21,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r backend/requirements.txt
 
-      - name: Zip backend contents only
+      - name: Zip backend folder correctly
         run: |
           cd backend
           zip -r ../backend.zip .
+        shell: bash
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
