@@ -23,8 +23,8 @@ jobs:
 
       - name: Zip backend folder (Linux-compatible)
         run: |
-          cd backend
-          zip -r ../backend.zip .
+          cd ..
+          zip -r ../backend.zip backend
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
