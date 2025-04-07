@@ -9,10 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: backend
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -23,10 +19,11 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
+        working-directory: backend
         run: pip install -r requirements.txt
 
       - name: Zip backend folder
-        run: zip -r ../backend.zip . -x "venv/*" "__pycache__/*" ".git/*"
+        run: zip -r backend.zip backend
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
