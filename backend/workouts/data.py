@@ -1,5 +1,5 @@
 workouts = [
-    {"name": "Push-ups", "type": "push", "muscles": ["chest", "triceps"]},
+    {"name": "Push-ups", "type": "push", "muscles": ["chest", "tricepss", "shoulders"]},
     {"name": "Pull-ups", "type": "pull", "muscles": ["back", "biceps"]},
     {"name": "Squats", "type": "legs", "muscles": ["quads", "glutes"]},
     {"name": "Lunges", "type": "legs", "muscles": ["quads", "hamstrings", "glutes"]},
