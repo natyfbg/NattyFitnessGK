@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Push-ups",
+    "type": "push",
+    "muscles": ["chest", "triceps", "shoulders"],
+    "equipment": "None",
+    "level": "beginner",
+    "description": "A fundamental bodyweight movement that targets the upper body muscles, especially chest and triceps.",
+    "video_url": "https://www.youtube.com/embed/IODxDxX7oi4"
+  },
+  {
+    "id": 2,
+    "name": "Pull-ups",
+    "type": "pull",
+    "muscles": ["back", "biceps", "forearms"],
+    "equipment": "Pull-up bar",
+    "level": "intermediate",
+    "description": "A compound upper-body pulling exercise that builds back and arm strength.",
+    "video_url": "https://www.youtube.com/embed/eGo4IYlbE5g"
+  }
+]

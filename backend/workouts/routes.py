@@ -1,7 +1,8 @@
 from flask import jsonify
 from . import workouts_bp
-from .data import workouts  # ← Import the data here
+from .data import get_workouts
+
 
 @workouts_bp.route("/api/workouts", methods=["GET"])
-def get_workouts():
-    return jsonify(workouts)
+def workouts_route():
+    return jsonify(get_workouts())
