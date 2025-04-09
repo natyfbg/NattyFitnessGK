@@ -1,27 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Home.css"; // Optional, for custom styles
+import "../styles/Home.css"; // optional if you want custom styling
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("/workouts");
+  const handleNavigate = () => {
+    navigate("/levels");
   };
 
   return (
     <div className="home-container">
-      <h1 className="text-3xl font-bold text-center mb-4">Explore Workout Levels</h1>
-      <p className="text-center mb-6">Choose your fitness level to get started.</p>
-      
-      <div className="flex justify-center items-center space-x-6">
-        <button 
-          className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-          onClick={handleClick}
-        >
-          View Workout Levels
-        </button>
-      </div>
+      <h1>🏋️ Welcome to NattyFitness</h1>
+      <p>Explore different workout levels to match your fitness goals.</p>
+      <button className="navigate-button" onClick={handleNavigate}>
+        Explore Workout Levels
+      </button>
     </div>
   );
 };

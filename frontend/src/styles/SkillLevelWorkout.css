@@ -1,44 +1,31 @@
-.skill-level-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .main-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .skill-section {
-    margin-bottom: 3rem;
-  }
-  
-  .skill-title {
-    font-size: 2rem;
-    text-align: center;
-    color: #222;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 0.5rem;
-  }
-  
-  .muscle-section {
-    margin-bottom: 1.5rem;
-  }
-  
-  .muscle-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 0.5rem;
-  }
-  
-  .exercise-list {
-    padding-left: 1.5rem;
-  }
-  
-  .exercise-item {
-    margin-bottom: 0.5rem;
-  }
-  
+.level-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.level-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.level-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.level-card {
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 25px;
+  width: 250px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.level-card:hover {
+  transform: scale(1.05);
+  background-color: #e0ffe0;
+}

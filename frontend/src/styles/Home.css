@@ -1,1 +1,21 @@
-/* Home.css – Optional for custom overrides */
+.home-container {
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  .navigate-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .navigate-button:hover {
+    background-color: #45a049;
+  }
+  
